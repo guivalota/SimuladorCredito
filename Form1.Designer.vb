@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,10 +33,12 @@ Partial Class Form1
         Me.lblIofFixo = New System.Windows.Forms.Label()
         Me.lblIofDiario = New System.Windows.Forms.Label()
         Me.lblJuros = New System.Windows.Forms.Label()
-        Me.lblValorTotal = New System.Windows.Forms.Label()
         Me.txtValorRealNecessiario = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ckbIof = New System.Windows.Forms.CheckBox()
+        Me.lblIofFixoReal = New System.Windows.Forms.Label()
+        Me.lblIofDiarioReal = New System.Windows.Forms.Label()
+        Me.lblJurosReal = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,6 +74,7 @@ Partial Class Form1
         Me.txtValorEmprestimo.Name = "txtValorEmprestimo"
         Me.txtValorEmprestimo.Size = New System.Drawing.Size(100, 20)
         Me.txtValorEmprestimo.TabIndex = 3
+        Me.txtValorEmprestimo.Text = "80000"
         '
         'txtJuros
         '
@@ -79,6 +82,7 @@ Partial Class Form1
         Me.txtJuros.Name = "txtJuros"
         Me.txtJuros.Size = New System.Drawing.Size(100, 20)
         Me.txtJuros.TabIndex = 4
+        Me.txtJuros.Text = "1,35"
         '
         'txtPrazo
         '
@@ -86,6 +90,7 @@ Partial Class Form1
         Me.txtPrazo.Name = "txtPrazo"
         Me.txtPrazo.Size = New System.Drawing.Size(100, 20)
         Me.txtPrazo.TabIndex = 5
+        Me.txtPrazo.Text = "365"
         '
         'btnCalcular
         '
@@ -110,32 +115,27 @@ Partial Class Form1
         Me.lblIofFixo.AutoSize = True
         Me.lblIofFixo.Location = New System.Drawing.Point(22, 187)
         Me.lblIofFixo.Name = "lblIofFixo"
-        Me.lblIofFixo.Size = New System.Drawing.Size(0, 13)
+        Me.lblIofFixo.Size = New System.Drawing.Size(10, 13)
         Me.lblIofFixo.TabIndex = 9
+        Me.lblIofFixo.Text = "-"
         '
         'lblIofDiario
         '
         Me.lblIofDiario.AutoSize = True
         Me.lblIofDiario.Location = New System.Drawing.Point(22, 212)
         Me.lblIofDiario.Name = "lblIofDiario"
-        Me.lblIofDiario.Size = New System.Drawing.Size(0, 13)
+        Me.lblIofDiario.Size = New System.Drawing.Size(10, 13)
         Me.lblIofDiario.TabIndex = 10
+        Me.lblIofDiario.Text = "-"
         '
         'lblJuros
         '
         Me.lblJuros.AutoSize = True
         Me.lblJuros.Location = New System.Drawing.Point(22, 236)
         Me.lblJuros.Name = "lblJuros"
-        Me.lblJuros.Size = New System.Drawing.Size(0, 13)
+        Me.lblJuros.Size = New System.Drawing.Size(10, 13)
         Me.lblJuros.TabIndex = 11
-        '
-        'lblValorTotal
-        '
-        Me.lblValorTotal.AutoSize = True
-        Me.lblValorTotal.Location = New System.Drawing.Point(22, 258)
-        Me.lblValorTotal.Name = "lblValorTotal"
-        Me.lblValorTotal.Size = New System.Drawing.Size(0, 13)
-        Me.lblValorTotal.TabIndex = 12
+        Me.lblJuros.Text = "-"
         '
         'txtValorRealNecessiario
         '
@@ -163,15 +163,44 @@ Partial Class Form1
         Me.ckbIof.Text = "IOF no emprestimos"
         Me.ckbIof.UseVisualStyleBackColor = True
         '
+        'lblIofFixoReal
+        '
+        Me.lblIofFixoReal.AutoSize = True
+        Me.lblIofFixoReal.Location = New System.Drawing.Point(270, 187)
+        Me.lblIofFixoReal.Name = "lblIofFixoReal"
+        Me.lblIofFixoReal.Size = New System.Drawing.Size(10, 13)
+        Me.lblIofFixoReal.TabIndex = 16
+        Me.lblIofFixoReal.Text = "-"
+        '
+        'lblIofDiarioReal
+        '
+        Me.lblIofDiarioReal.AutoSize = True
+        Me.lblIofDiarioReal.Location = New System.Drawing.Point(270, 212)
+        Me.lblIofDiarioReal.Name = "lblIofDiarioReal"
+        Me.lblIofDiarioReal.Size = New System.Drawing.Size(10, 13)
+        Me.lblIofDiarioReal.TabIndex = 17
+        Me.lblIofDiarioReal.Text = "-"
+        '
+        'lblJurosReal
+        '
+        Me.lblJurosReal.AutoSize = True
+        Me.lblJurosReal.Location = New System.Drawing.Point(270, 236)
+        Me.lblJurosReal.Name = "lblJurosReal"
+        Me.lblJurosReal.Size = New System.Drawing.Size(10, 13)
+        Me.lblJurosReal.TabIndex = 18
+        Me.lblJurosReal.Text = "-"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(286, 310)
+        Me.ClientSize = New System.Drawing.Size(467, 310)
+        Me.Controls.Add(Me.lblJurosReal)
+        Me.Controls.Add(Me.lblIofDiarioReal)
+        Me.Controls.Add(Me.lblIofFixoReal)
         Me.Controls.Add(Me.ckbIof)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtValorRealNecessiario)
-        Me.Controls.Add(Me.lblValorTotal)
         Me.Controls.Add(Me.lblJuros)
         Me.Controls.Add(Me.lblIofDiario)
         Me.Controls.Add(Me.lblIofFixo)
@@ -205,8 +234,10 @@ Partial Class Form1
     Friend WithEvents lblIofFixo As Label
     Friend WithEvents lblIofDiario As Label
     Friend WithEvents lblJuros As Label
-    Friend WithEvents lblValorTotal As Label
     Friend WithEvents txtValorRealNecessiario As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ckbIof As CheckBox
+    Friend WithEvents lblIofFixoReal As Label
+    Friend WithEvents lblIofDiarioReal As Label
+    Friend WithEvents lblJurosReal As Label
 End Class
